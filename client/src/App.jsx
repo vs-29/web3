@@ -1,11 +1,12 @@
 import {Navbar,Footer,Loader,Transactions,Services,Welcome,} from './components'
-
+import { BrowserRouter as Router } from 'react-router-dom';
 
 
 
 
 const App=()=> {
   return (
+    <Router basename="/">
       <div className="min-h-screen">
       <div className='gradient-bg-welcome'>
         <Navbar />
@@ -15,7 +16,7 @@ const App=()=> {
       <Transactions/>
       <Footer/>
       </div>
-
+      </Router>
   )
 }
 

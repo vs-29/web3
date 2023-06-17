@@ -2,14 +2,17 @@ import { HiMenuAlt4 } from 'react-icons/hi';
 import { AiOutlineClose } from 'react-icons/ai';
 import { useState } from 'react';
 import logo from '../../images/logo.png';
+import { Link } from 'react-router-dom';
 
-const  NavbarItem =({title,classProps})=>{
-    return(
-        <li className={`mx-4 cursor-pointer ${classProps}`}>
-           {title}
-        </li>
-    )
-};
+
+
+const Reload= (e) => {
+    
+    e.preventDefault();
+    
+      window.location.reload();
+    
+  }
 
 const Navbar= () =>{
      const [toggleMenu,setToggleMenu]=useState(false);
@@ -23,13 +26,19 @@ const Navbar= () =>{
                 <img src={logo} alt='logo' className='w-32 cursor-pointer'/> 
             </div>
             <ul className='text-white md:flex hidden list-none flex-row justify-between items-center flex-initial'>
-                {
-                   [ "Market","Exchange","Tutorial","Wallets"].map((item,index)=>(
-                    <NavbarItem key={item+index} title={item}/>
-                   ))
-                }
-                <li className='bg-[#2952e3]  py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg-[#2546bd]'>
-                    login
+                
+                <li  className={`mx-4 cursor-pointer`}>
+                <Link to="https://coinmarketcap.com/">
+                 Market
+                </Link>
+                </li>
+                <li  className={`mx-4 cursor-pointer`}>
+                <Link to="https://ethereum.org/en/developers/tutorials/">
+                 Tutorial
+                </Link>
+                </li>
+                <li  className={`mx-4 cursor-pointer`} onClick={(e)=>Reload(e)}>
+                 Home
                 </li>
             </ul>
             <div className='flex relative'>
@@ -43,11 +52,19 @@ const Navbar= () =>{
                             <li className='text-xl w-full my-2'>
                                 <AiOutlineClose onClick={()=>setToggleMenu(false)}/>
                             </li>
-                            {
-                             [ "Market","Exchange","Tutorial","Wallets"].map((item,index)=>(
-                              <NavbarItem key={item+index} title={item} classProps="{my-2 text-lg}"/>
-                             ))
-                            }
+                            <li  className={`mx-4 cursor-pointer`}>
+                            <Link to="https://coinmarketcap.com/">
+                            Market
+                            </Link>
+                            </li>
+                            <li  className={`mx-4 cursor-pointer`}>
+                            <Link to="https://ethereum.org/en/developers/tutorials/">
+                            Tutorial
+                            </Link>
+                            </li>
+                            <li  className={`mx-4 cursor-pointer`} onClick={(e)=>Reload(e)}>
+                             Home
+                             </li>
                         </ul>
                     )
                  }
