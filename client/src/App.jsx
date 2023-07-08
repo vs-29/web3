@@ -1,4 +1,4 @@
-import {Navbar,Footer,Loader,Transactions,Services,Welcome,} from './components'
+import {Navbar,Footer,Transactions,Services,Welcome,} from './components'
 import { BrowserRouter as Router } from 'react-router-dom';
 
 
