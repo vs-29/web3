@@ -63,7 +63,7 @@ const Welcome= () =>{
                  Security
               </div>
               <div className={` rounded-tr-2xl ${commonStyles}`}>
-                 Ethereum
+                 Polygon
               </div>
               <div className={` rounded-bl-2xl ${commonStyles}`}>
                  Web3.0
@@ -90,14 +90,14 @@ const Welcome= () =>{
                                 {shortenAddress(currentAccount)}
                             </p>
                             <p className="text-white font-semibold text-lg mt-1">
-                                Ethereum
+                                Polygon
                             </p>
                         </div>
                     </div>
                 </div>
                 <div className="p-5 h-80 sm:w-96 w-full flex flex-col justify-start items-center blue-glassmorphism">
                 <Input placeholder="Address To" name="addressTo" type="text" handleChange={handleChange} />
-                <Input placeholder="Amount (ETH)" name="amount" type="number" handleChange={handleChange} />
+                <Input placeholder="Amount (MATIC)" name="amount" type="number" handleChange={handleChange} />
                 <Input placeholder="Keyword (Gif)" name="keyword" type="text" handleChange={handleChange} />
                 <Input placeholder="Enter Message" name="message" type="text" handleChange={handleChange} />
 
